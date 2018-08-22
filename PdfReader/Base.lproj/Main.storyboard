@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,21 +20,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="95" id="2Mr-tH-bdj" customClass="TableViewCell" customModule="PdfReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="148" id="2Mr-tH-bdj" customClass="TableViewCell" customModule="PdfReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Mr-tH-bdj" id="F14-cB-Dmt">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="147.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07E-PX-eGs">
-                                            <rect key="frame" x="16" y="0.0" width="150" height="95"/>
+                                            <rect key="frame" x="16" y="0.0" width="150" height="147.66666666666666"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comicsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-0I-0NQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="95"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="147.66666666666666"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-iw-3jO">
-                                                    <rect key="frame" x="23" y="0.0" width="104" height="94"/>
+                                                    <rect key="frame" x="23" y="0.0" width="104" height="146.66666666666666"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -52,7 +53,7 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usi-DR-76j">
-                                            <rect key="frame" x="233" y="32" width="126" height="30"/>
+                                            <rect key="frame" x="233" y="58.666666666666657" width="126" height="30"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-QU-PCX">
                                                     <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
@@ -98,7 +99,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5U-zX-JCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="70.774647887323951"/>
+            <point key="canvasLocation" x="989.60000000000002" y="70.197044334975374"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="IWS-is-qHD">
+            <objects>
+                <viewController id="F8G-e8-0Gn" customClass="WebViewController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M8D-pf-F82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iab-tv-Egj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iab-tv-Egj" firstAttribute="top" secondItem="M8D-pf-F82" secondAttribute="top" id="R39-xv-fh8"/>
+                            <constraint firstItem="iab-tv-Egj" firstAttribute="leading" secondItem="acC-2H-g8H" secondAttribute="leading" id="ju7-vb-404"/>
+                            <constraint firstItem="iab-tv-Egj" firstAttribute="trailing" secondItem="acC-2H-g8H" secondAttribute="trailing" id="y8w-af-Q32"/>
+                            <constraint firstAttribute="bottom" secondItem="iab-tv-Egj" secondAttribute="bottom" id="zQg-nT-h6y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="acC-2H-g8H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mjp-Z4-QRu">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="BRY-U7-FNu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xmj-rv-NHb">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="BackButtonTapped" destination="BRY-U7-FNu" id="R98-gi-dsA"/>
+                        <outlet property="PDFView" destination="iab-tv-Egj" id="D2b-zJ-ObU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb7-Eb-wIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730.4000000000001" y="74.630541871921181"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="npd-DX-fp0">
@@ -117,6 +158,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE0-rt-WWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="72.413793103448285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ska-5B-DmX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kLm-m1-PeH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jta-3q-5fp">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F8G-e8-0Gn" kind="relationship" relationship="rootViewController" id="4Yp-FQ-HC6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psi-LO-mHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="74.630541871921181"/>
         </scene>
     </scenes>
     <resources>
