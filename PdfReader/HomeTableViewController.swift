@@ -8,6 +8,8 @@
 
 import UIKit
 
+let pdfArray = ["https://www.webtoons.com/en/challenge/fate/awakening/viewer?title_no=203697&episode_no=1&webtoonType=CHALLENGE","https://www.webtoons.com/en/challenge/fate/encounter/viewer?title_no=203697&episode_no=2"]
+
 class HomeTableViewController: UITableViewController, cellDelegate {
 
     override func viewDidLoad() {
@@ -27,13 +29,13 @@ class HomeTableViewController: UITableViewController, cellDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return pdfArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
       
-        cell.nameLabel.text = "test"
+        cell.nameLabel.text = "FATE \(+ indexPath + 1)"
         
         cell.delegate = self
         

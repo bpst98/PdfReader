@@ -18,6 +18,10 @@ class WebViewController: UIViewController , UIWebViewDelegate {
 
         PDFView.delegate = self
         
+        let url = URL(string: "https://www.webtoons.com/en/challenge/fate/awakening/viewer?title_no=203697&episode_no=1&webtoonType=CHALLENGE")
+        let request = URLRequest(url: url!)
+        PDFView.loadRequest(request)
+        
     }
 
     
