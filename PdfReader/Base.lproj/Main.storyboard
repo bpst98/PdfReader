@@ -27,43 +27,24 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="147.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07E-PX-eGs">
-                                            <rect key="frame" x="16" y="0.0" width="150" height="147.66666666666666"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="usi-DR-76j">
+                                            <rect key="frame" x="16" y="58.666666666666657" width="343" height="30"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comicsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-0I-0NQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="147.66666666666666"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-iw-3jO">
-                                                    <rect key="frame" x="23" y="0.0" width="104" height="146.66666666666666"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ua-iw-3jO">
+                                                    <rect key="frame" x="0.0" y="5" width="104.33333333333333" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gOD-0I-0NQ" secondAttribute="bottom" id="1pq-RN-RRG"/>
-                                                <constraint firstItem="gOD-0I-0NQ" firstAttribute="top" secondItem="07E-PX-eGs" secondAttribute="top" id="1qi-fQ-G2a"/>
-                                                <constraint firstItem="9ua-iw-3jO" firstAttribute="leading" secondItem="07E-PX-eGs" secondAttribute="leading" constant="23" id="Cwv-8s-D8t"/>
-                                                <constraint firstItem="gOD-0I-0NQ" firstAttribute="leading" secondItem="07E-PX-eGs" secondAttribute="leading" id="TT2-2c-0mG"/>
-                                                <constraint firstItem="gOD-0I-0NQ" firstAttribute="centerY" secondItem="9ua-iw-3jO" secondAttribute="centerY" id="X6R-CC-Ugz"/>
-                                                <constraint firstItem="gOD-0I-0NQ" firstAttribute="top" secondItem="9ua-iw-3jO" secondAttribute="top" id="biV-M9-9Fp"/>
-                                                <constraint firstAttribute="trailing" secondItem="gOD-0I-0NQ" secondAttribute="trailing" id="jog-FX-FVr"/>
-                                                <constraint firstItem="9ua-iw-3jO" firstAttribute="centerX" secondItem="gOD-0I-0NQ" secondAttribute="centerX" id="urk-4f-gyD"/>
-                                            </constraints>
-                                        </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="usi-DR-76j">
-                                            <rect key="frame" x="233" y="58.666666666666657" width="126" height="30"/>
-                                            <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-QU-PCX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                                    <rect key="frame" x="119.33333333333334" y="0.0" width="104.33333333333334" height="30"/>
                                                     <state key="normal" title="View"/>
                                                     <connections>
                                                         <action selector="viewTapped:" destination="2Mr-tH-bdj" eventType="touchUpInside" id="nqa-SO-3bZ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FV-XW-fla">
-                                                    <rect key="frame" x="59" y="0.0" width="67" height="30"/>
+                                                    <rect key="frame" x="238.66666666666666" y="0.0" width="104.33333333333334" height="30"/>
                                                     <state key="normal" title="download"/>
                                                     <connections>
                                                         <action selector="downloadTapped:" destination="2Mr-tH-bdj" eventType="touchUpInside" id="S6c-kV-V4A"/>
@@ -73,18 +54,14 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="07E-PX-eGs" firstAttribute="top" secondItem="F14-cB-Dmt" secondAttribute="top" id="2h8-sb-Lte"/>
-                                        <constraint firstItem="07E-PX-eGs" firstAttribute="leading" secondItem="F14-cB-Dmt" secondAttribute="leadingMargin" id="FPI-t9-taC"/>
                                         <constraint firstItem="usi-DR-76j" firstAttribute="trailing" secondItem="F14-cB-Dmt" secondAttribute="trailingMargin" id="JmG-uX-WtA"/>
-                                        <constraint firstItem="07E-PX-eGs" firstAttribute="centerY" secondItem="usi-DR-76j" secondAttribute="centerY" id="Lzi-NR-C1g"/>
-                                        <constraint firstItem="usi-DR-76j" firstAttribute="leading" secondItem="07E-PX-eGs" secondAttribute="trailing" constant="67" id="f96-Nh-oFg"/>
-                                        <constraint firstItem="07E-PX-eGs" firstAttribute="centerY" secondItem="F14-cB-Dmt" secondAttribute="centerY" id="kRd-8p-Man"/>
+                                        <constraint firstItem="usi-DR-76j" firstAttribute="centerY" secondItem="F14-cB-Dmt" secondAttribute="centerY" id="Yn5-rK-aea"/>
+                                        <constraint firstItem="usi-DR-76j" firstAttribute="centerX" secondItem="F14-cB-Dmt" secondAttribute="centerX" id="ety-y9-Ii9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="tintColor" red="0.87633662140000002" green="0.14914756130000001" blue="0.1874756544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="downloadButton" destination="0FV-XW-fla" id="kMA-5j-V65"/>
-                                    <outlet property="iconImageView" destination="gOD-0I-0NQ" id="vVL-jx-2t1"/>
                                     <outlet property="nameLabel" destination="9ua-iw-3jO" id="55E-k5-mrp"/>
                                     <outlet property="viewButton" destination="xCN-QU-PCX" id="4FE-CK-sqJ"/>
                                 </connections>
@@ -178,7 +155,4 @@
             <point key="canvasLocation" x="1788" y="74.630541871921181"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="comicsIcon" width="512" height="512"/>
-    </resources>
 </document>

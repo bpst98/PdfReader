@@ -6,6 +6,7 @@ target 'PdfReader' do
   use_frameworks!
 
 pod 'Alamofire'
+pod 'MBProgressHUD'
 
   # Pods for PdfReader
 

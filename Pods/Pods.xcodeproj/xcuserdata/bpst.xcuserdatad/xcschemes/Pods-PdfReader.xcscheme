@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "71894D5C2F1162D8B45556C63F45A4FC"
+               BlueprintIdentifier = "A433CEF9DBB2B3CF693AC17B8D96041B"
                BuildableName = "Pods_PdfReader.framework"
                BlueprintName = "Pods-PdfReader"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "71894D5C2F1162D8B45556C63F45A4FC"
+            BlueprintIdentifier = "A433CEF9DBB2B3CF693AC17B8D96041B"
             BuildableName = "Pods_PdfReader.framework"
             BlueprintName = "Pods-PdfReader"
             ReferencedContainer = "container:Pods.xcodeproj">
