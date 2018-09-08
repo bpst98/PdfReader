@@ -81,7 +81,7 @@
         <!--Web View Controller-->
         <scene sceneID="IWS-is-qHD">
             <objects>
-                <viewController id="F8G-e8-0Gn" customClass="WebViewController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="F8G-e8-0Gn" customClass="WebViewController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M8D-pf-F82">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,24 +135,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IE0-rt-WWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="72.413793103448285"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ska-5B-DmX">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kLm-m1-PeH" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jta-3q-5fp">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="F8G-e8-0Gn" kind="relationship" relationship="rootViewController" id="4Yp-FQ-HC6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="psi-LO-mHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1788" y="74.630541871921181"/>
         </scene>
     </scenes>
 </document>

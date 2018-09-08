@@ -13,17 +13,26 @@ class WebViewController: UIViewController , UIWebViewDelegate {
     
     @IBOutlet weak var PDFView: UIWebView!
     
+    
+    var urlString = " "
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        PDFView.delegate = self
         
-        let url = URL(string: "https://www.webtoons.com/en/challenge/fate/awakening/viewer?title_no=203697&episode_no=1&webtoonType=CHALLENGE")
-        let request = URLRequest(url: url!)
-        PDFView.loadRequest(request)
         
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(true)
+        PDFView.delegate = self
+        
+        let url = URL(string: self.urlString)
+        let request = URLRequest(url: url!)
+        PDFView.loadRequest(request)
+    }
     
     
 
