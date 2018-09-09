@@ -12,6 +12,9 @@
 		2106287720DF926600134E76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2106287520DF926600134E76 /* Main.storyboard */; };
 		2106287920DF926800134E76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2106287820DF926800134E76 /* Assets.xcassets */; };
 		2106287C20DF926800134E76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2106287A20DF926800134E76 /* LaunchScreen.storyboard */; };
+		213C623E2144FAF0002380A4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213C623D2144FAF0002380A4 /* MainTabBarController.swift */; };
+		213C624021450088002380A4 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213C623F21450088002380A4 /* DownloadsViewController.swift */; };
+		213C6242214500CA002380A4 /* SemesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213C6241214500CA002380A4 /* SemesterViewController.swift */; };
 		215F82D4212DA7660086ABB2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F82D3212DA7660086ABB2 /* WebViewController.swift */; };
 		21A2F17720E14AB400B87053 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2F17620E14AB400B87053 /* HomeTableViewController.swift */; };
 		21A2F17920E14AED00B87053 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2F17820E14AED00B87053 /* TableViewCell.swift */; };
@@ -24,6 +27,9 @@
 		2106287820DF926800134E76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2106287B20DF926800134E76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2106287D20DF926800134E76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		213C623D2144FAF0002380A4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		213C623F21450088002380A4 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		213C6241214500CA002380A4 /* SemesterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterViewController.swift; sourceTree = "<group>"; };
 		215F82D3212DA7660086ABB2 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		21A2F17620E14AB400B87053 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		21A2F17820E14AED00B87053 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -69,7 +75,10 @@
 				2106287520DF926600134E76 /* Main.storyboard */,
 				21A2F17620E14AB400B87053 /* HomeTableViewController.swift */,
 				21A2F17820E14AED00B87053 /* TableViewCell.swift */,
+				213C623F21450088002380A4 /* DownloadsViewController.swift */,
+				213C6241214500CA002380A4 /* SemesterViewController.swift */,
 				215F82D3212DA7660086ABB2 /* WebViewController.swift */,
+				213C623D2144FAF0002380A4 /* MainTabBarController.swift */,
 				2106287820DF926800134E76 /* Assets.xcassets */,
 				2106287A20DF926800134E76 /* LaunchScreen.storyboard */,
 				2106287D20DF926800134E76 /* Info.plist */,
@@ -226,7 +235,10 @@
 			files = (
 				21A2F17920E14AED00B87053 /* TableViewCell.swift in Sources */,
 				21A2F17720E14AB400B87053 /* HomeTableViewController.swift in Sources */,
+				213C624021450088002380A4 /* DownloadsViewController.swift in Sources */,
+				213C623E2144FAF0002380A4 /* MainTabBarController.swift in Sources */,
 				2106287220DF926600134E76 /* AppDelegate.swift in Sources */,
+				213C6242214500CA002380A4 /* SemesterViewController.swift in Sources */,
 				215F82D4212DA7660086ABB2 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +388,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G5UJLQFVA;
 				INFOPLIST_FILE = PdfReader/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bhanu.Pdf-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -394,7 +409,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6G5UJLQFVA;
 				INFOPLIST_FILE = PdfReader/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bhanu.Pdf-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

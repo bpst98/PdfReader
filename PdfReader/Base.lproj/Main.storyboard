@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tbK-Pj-guZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wt9-TW-oc4">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -116,7 +117,125 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hb7-Eb-wIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730.4000000000001" y="74.630541871921181"/>
+            <point key="canvasLocation" x="1951" y="70"/>
+        </scene>
+        <!--Semester-->
+        <scene sceneID="qMz-Rc-Pcl">
+            <objects>
+                <viewController id="Wt9-TW-oc4" customClass="SemesterViewController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLK-tI-Sso">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Semester and Branch" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-kW-HCB">
+                                <rect key="frame" x="0.0" y="74" width="375" height="28"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                                <color key="textColor" red="0.99730008335318654" green="1" blue="0.99224314685941917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2w-yn-7Vn">
+                                <rect key="frame" x="0.0" y="110" width="375" height="216"/>
+                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.2387946852" green="0.39752325129999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="M2w-yn-7Vn" secondAttribute="height" multiplier="125:72" id="pXA-sV-Q0y"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wt9-TW-oc4" id="hOv-nr-Tak"/>
+                                    <outlet property="delegate" destination="Wt9-TW-oc4" id="UKl-nP-uXI"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qmy-kW-HCB" firstAttribute="leading" secondItem="atz-yq-TRh" secondAttribute="leading" id="1yE-2h-DTw"/>
+                            <constraint firstItem="qmy-kW-HCB" firstAttribute="trailing" secondItem="atz-yq-TRh" secondAttribute="trailing" id="9GH-NE-XyW"/>
+                            <constraint firstItem="qmy-kW-HCB" firstAttribute="top" secondItem="atz-yq-TRh" secondAttribute="top" constant="30" id="Rp7-CU-CJ9"/>
+                            <constraint firstItem="M2w-yn-7Vn" firstAttribute="top" secondItem="qmy-kW-HCB" secondAttribute="bottom" constant="8" id="bJy-gK-wSA"/>
+                            <constraint firstItem="M2w-yn-7Vn" firstAttribute="trailing" secondItem="atz-yq-TRh" secondAttribute="trailing" id="iU8-bH-IkT"/>
+                            <constraint firstItem="M2w-yn-7Vn" firstAttribute="leading" secondItem="atz-yq-TRh" secondAttribute="leading" id="sLD-Me-w4q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="atz-yq-TRh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Semester" id="K4z-SL-aVN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IsW-wR-eXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783.20000000000005" y="352.46305418719214"/>
+        </scene>
+        <!--Downloads View Controller-->
+        <scene sceneID="dad-D2-Sgu">
+            <objects>
+                <viewController id="eKQ-n8-ckU" customClass="DownloadsViewController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAZ-w6-iwV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZbE-xC-Tey">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <color key="backgroundColor" red="0.44642694550000001" green="0.54408905060000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.74557533249999997" green="0.77064084089999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.44642694550000001" green="0.54408905060000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="EfP-FX-NkY" detailTextLabel="4Be-R0-JzI" rowHeight="108" style="IBUITableViewCellStyleValue1" id="juP-ff-gAu">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="juP-ff-gAu" id="oxr-Hg-iLz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EfP-FX-NkY">
+                                                    <rect key="frame" x="15" y="44" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Be-R0-JzI">
+                                                    <rect key="frame" x="301.33333333333331" y="44" width="58.666666666666664" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44642694550000001" green="0.54408905060000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZbE-xC-Tey" secondAttribute="trailing" id="1D6-uf-Q0V"/>
+                            <constraint firstItem="ZbE-xC-Tey" firstAttribute="leading" secondItem="RAZ-w6-iwV" secondAttribute="leading" id="F4o-oM-Wa4"/>
+                            <constraint firstItem="ZbE-xC-Tey" firstAttribute="bottom" secondItem="388-vQ-n1c" secondAttribute="bottom" id="fXF-HT-vpn"/>
+                            <constraint firstItem="ZbE-xC-Tey" firstAttribute="top" secondItem="388-vQ-n1c" secondAttribute="top" id="jPH-fC-wTd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="388-vQ-n1c"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="downloads" id="bXz-J4-bnd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bj-HV-1hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783.20000000000005" y="-300"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="JTB-E9-RsK">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FEe-Ok-pKe" customClass="MainTabBarController" customModule="PdfReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1Z-30-W0f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eKQ-n8-ckU" kind="relationship" relationship="viewControllers" id="9nG-h6-VoP"/>
+                        <segue destination="Wt9-TW-oc4" kind="relationship" relationship="viewControllers" id="gXj-uL-qEy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fB8-Nr-Ipn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2090" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="npd-DX-fp0">
