@@ -18,9 +18,10 @@ class WebViewController: UIViewController , UIWebViewDelegate {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         
+        super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.layer.zPosition = -1
         
     }
 
@@ -28,6 +29,8 @@ class WebViewController: UIViewController , UIWebViewDelegate {
         
         super.viewDidAppear(true)
         PDFView.delegate = self
+  
+        
         
         let url = URL(string: self.urlString)
         let request = URLRequest(url: url!)
@@ -38,4 +41,36 @@ class WebViewController: UIViewController , UIWebViewDelegate {
 
     @IBOutlet weak var BackButtonTapped: UIBarButtonItem!
     
+    @IBAction func BackButton(_ sender: Any) {
+        self.tabBarController?.tabBar.layer.zPosition = 0
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    func downloadProgress(){
+        
+        //download progress animation
+        
+        let downLoadProgressAnimation = CAShapeLayer()
+        downLoadProgressAnimation.strokeColor = UIColor.purple.cgColor
+        downLoadProgressAnimation.fillColor = UIColor.clear.cgColor
+        downLoadProgressAnimation.lineWidth = 10
+        downLoadProgressAnimation.strokeEnd = 0
+        downLoadProgressAnimation.lineCap = kCALineCapRound
+        
+        view.layer.addSublayer(downLoadProgressAnimation)
+        
+        let circularPath = UIBezierPath(arcCenter: view.center, radius: 100, startAngle: 0.25*CGFloat.pi, endAngle: 2*CGFloat.pi, clockwise: true)
+        
+        downLoadProgressAnimation.path = circularPath.cgPath
+        
+        
+        //download progress animation
+    }
 }
+
+
+
+
+

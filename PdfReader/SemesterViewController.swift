@@ -10,9 +10,13 @@ import UIKit
 
 class SemesterViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource{
     
+    @IBOutlet weak var semesterLabel: UILabel!
+    @IBOutlet weak var branchLabel: UILabel!
+    @IBOutlet weak var NextButton: UIButton!
+    
+    
     var semester : [[String]] = [[]]
-    
-    
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return semester.count
@@ -36,17 +40,37 @@ class SemesterViewController: UIViewController ,UIPickerViewDelegate,UIPickerVie
         view.addSubview(label)
         return view
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        semesterLabel.text = semester[0][pickerView.selectedRow(inComponent: 0)]
+        branchLabel.text = semester[1][pickerView.selectedRow(inComponent: 1)]
+        
+    }
     
 
     override func viewDidLoad() {
         
+        self.tabBarController?.tabBar.layer.zPosition = 0
         
         semester = [ ["first","second","third","fourth","fifth","sixth","seventh","eighth"],
                      ["CSE", "IT","EEE","ECE","MAE","CIVIL"] ]
-        
+        NextButton.layer.cornerRadius = 20
         super.viewDidLoad()
 
     }
 
-
+    @IBAction func NextButtonTapped(_ sender: Any) {
+        
+        let nextViewController :SubjectsTableViewController =  self.storyboard?.instantiateViewController(withIdentifier: "SubjectsTableViewController") as! SubjectsTableViewController
+        
+        nextViewController.semester = semesterLabel.text!
+        nextViewController.branch = branchLabel.text!
+        
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+      
+    
+        
+    }
+    
+    
 }

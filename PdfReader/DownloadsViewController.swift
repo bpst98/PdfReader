@@ -10,7 +10,10 @@ import UIKit
 
 class DownloadsViewController: UIViewController {
 
+    @IBOutlet weak var DownloadTableView: UITableView!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     }
 
